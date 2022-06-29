@@ -66,12 +66,11 @@
                                 <br>
                                 <label for="txtStock"><h3>Stock: {{ aux.stock }}</h3></label>
                                 <br>
-                                <label for="txtCantidad"><h3>Cantidad</h3></label>
-                                <input type="number" min="1" class="form-control" id="txtCantidad" name="txtCantidad"
-                                  placeholder="Ej:10">
+                                <label for="txtCantidad"><h3>Cantidad:</h3></label>
                                 
                                   <input type="hidden" name="nombre_producto" id="nombre_producto" value="{{ aux.nombre }}">
-                                  <input type="hidden" name="precio_producto" id="precioproducto" value="{{ aux.precio }}">
+                                  <input type="hidden" name="precio_producto" id="precio_producto" value="{{ aux.precio }}">
+                                  <input type="number" min="1" name="cantidad" id="cantidad" value="{{ aux.cantidad }}">
                                   <input type="hidden" name="imagen" id="imagen" value="{{ aux.imagen.url }}">
                                   <input type="submit" id="btnEnviar" name="btnEnviar" class="btn btn-success">
                                   <input type="reset" id="btnLimpiar" name="btnLimpiar" class="btn btn-danger">
@@ -90,6 +89,9 @@
         </div>
         {% endfor %}
       </div>
+
+
+
 
     </div>
   </div>
